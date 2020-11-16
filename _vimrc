@@ -172,7 +172,7 @@ map <leader>w :w!<cr>
 au GUIEnter * simalt ~x
 
 " This is only for the GUI gvim not regular vim
-colorscheme iceberg
+"colorscheme iceberg
 
 "set font size for console"
 set guifont=Consolas:h14
