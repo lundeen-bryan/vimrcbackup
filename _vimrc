@@ -1,3 +1,4 @@
+
 " For more options see ":help option-list" and ":options".
 
 " make VIM use all default modes instead of what VI uses
@@ -51,11 +52,8 @@ endfunction
 " use mouse in vim for scrolling
 set mouse=a
 
-<<<<<<< HEAD
-=======
 " display incomplete commands
 set showcmd
->>>>>>> 39a7831dcb0d65edefed2853ddca54571dfa34d1
 
 "+------------------Clipboard stuff----------------------+
 "| note that "x" will always cut to the system clipboard |
@@ -111,13 +109,6 @@ set expandtab
 " no line wrap
 set nowrap
 
-<<<<<<< HEAD
-" search setting
-set incsearch
-
-" use syntax highlighting
-syntax on
-=======
 " search setting if possible to timeout
 if has ('reltime')
 set incsearch
@@ -145,7 +136,6 @@ if !has('gui_running')
 else
   colorscheme iceberg
 endif
->>>>>>> 39a7831dcb0d65edefed2853ddca54571dfa34d1
 
 " Show the line and column number of the cursor position
 set ruler
@@ -166,12 +156,6 @@ set wildmenu
 " Show a few lines of context around the cursor
 set scrolloff=5
 
-<<<<<<< HEAD
-" Highlight search matches
-set hlsearch
-
-=======
->>>>>>> 39a7831dcb0d65edefed2853ddca54571dfa34d1
 " Enable incremental searching
 set incsearch
 
@@ -209,12 +193,7 @@ map <leader>w :w!<cr>
 "start maximised"
 au GUIEnter * simalt ~x
 
-<<<<<<< HEAD
-" This is only for the GUI gvim not regular vim
-"colorscheme iceberg
-=======
 
->>>>>>> 39a7831dcb0d65edefed2853ddca54571dfa34d1
 
 "set font size for console"
 set guifont=Consolas:h14
