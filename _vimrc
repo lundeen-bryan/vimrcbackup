@@ -51,6 +51,11 @@ endfunction
 " use mouse in vim for scrolling
 set mouse=a
 
+<<<<<<< HEAD
+=======
+" display incomplete commands
+set showcmd
+>>>>>>> 39a7831dcb0d65edefed2853ddca54571dfa34d1
 
 "+------------------Clipboard stuff----------------------+
 "| note that "x" will always cut to the system clipboard |
@@ -106,11 +111,41 @@ set expandtab
 " no line wrap
 set nowrap
 
+<<<<<<< HEAD
 " search setting
 set incsearch
 
 " use syntax highlighting
 syntax on
+=======
+" search setting if possible to timeout
+if has ('reltime')
+set incsearch
+endif
+
+" Switch syntax highlighting on when the terminal has colors or when using the
+" GUI (which always has colors).
+if &t_Co > 2 || has("gui_running")
+  " Revert with ":syntax off".
+  syntax on
+  " Highlight search matches
+  set hlsearch
+  " I like highlighting strings inside C comments.
+  " Revert with ":unlet c_comment_strings".
+  let c_comment_strings=1
+endif
+syntax enable
+set background=dark
+
+if !has('gui_running')
+    set termguicolors
+    syntax enable
+    set background=dark
+    colorscheme modice
+else
+  colorscheme iceberg
+endif
+>>>>>>> 39a7831dcb0d65edefed2853ddca54571dfa34d1
 
 " Show the line and column number of the cursor position
 set ruler
@@ -131,9 +166,12 @@ set wildmenu
 " Show a few lines of context around the cursor
 set scrolloff=5
 
+<<<<<<< HEAD
 " Highlight search matches
 set hlsearch
 
+=======
+>>>>>>> 39a7831dcb0d65edefed2853ddca54571dfa34d1
 " Enable incremental searching
 set incsearch
 
@@ -171,8 +209,12 @@ map <leader>w :w!<cr>
 "start maximised"
 au GUIEnter * simalt ~x
 
+<<<<<<< HEAD
 " This is only for the GUI gvim not regular vim
 "colorscheme iceberg
+=======
+
+>>>>>>> 39a7831dcb0d65edefed2853ddca54571dfa34d1
 
 "set font size for console"
 set guifont=Consolas:h14
