@@ -1,3 +1,4 @@
+
 " For more options see ":help option-list" and ":options".
 
 " make VIM use all default modes instead of what VI uses
@@ -113,9 +114,6 @@ if has ('reltime')
 set incsearch
 endif
 
-" Toggle off search highlight
-map <leader>hl :noh<CR>
-
 " Switch syntax highlighting on when the terminal has colors or when using the
 " GUI (which always has colors).
 if &t_Co > 2 || has("gui_running")
@@ -183,7 +181,9 @@ set smartindent
 set expandtab
 
 " Remap VIM 0 to first non-blank character
-map 0 ^
+"map 0 ^ --removed this as it makes more sense to go to the beginning of the
+"line then to go to the first character you would then press 0w to go there
+"and wala!
 
 " Easily create HTML unorded lists.
 map <F3> i<ul><CR><Space><Space><li></li><CR><Esc>I</ul><Esc>kcit
@@ -195,6 +195,11 @@ map <leader>w :w!<cr>
 "start maximised"
 au GUIEnter * simalt ~x
 
+"add package manager
+packloadall
+
+"load nerdtree automatically
+autocmd vimenter * NERDTree
 
 "set font size for console"
 set guifont=Consolas:h14
@@ -217,3 +222,4 @@ nnoremap <space> i<space><esc>
 set backupdir=$TEMP//
 set directory=$TEMP//
 set undodir=$TEMP//
+
