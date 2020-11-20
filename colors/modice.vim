@@ -1,17 +1,27 @@
-" local syntax file - set colors on a per-machine basis:
-" vim: tw=0 ts=4 sw=4
-" Vim color file
-" Maintainer:	Steven Vertigan <steven@vertigan.wattle.id.au>
-" Last Change:	2006 Sep 23
-" Revision #5: Switch main text from white to yellow for easier contrast,
-" fixed some problems with terminal backgrounds.
+" _________________________________________
+" \_ _/ ____| ____| ___ \ ____| ___ \  ___/
+"  | | |____| ____| ___ < ____| __  / |__ \
+" /___\_____|_____|_____/_____|_| \_\_____/
+"
+" File:       iceberg.vim - modified
+" Maintainer: cocopon <cocopon@me.com>
+" Modified:   2020-07-20 14:00+0300
+" License:    MIT
+" Note: I modified this to work in vim 8.1 - Bry
 
-set background=dark
+"if !has('gui_running') && &t_Co < 256
+"  finish
+"endif
+
 hi clear
-if exists("syntax_on")
+if exists('syntax_on')
   syntax reset
 endif
+
+set background=dark
+
 let g:colors_name = "modice"
+
   hi Normal ctermbg=234 ctermfg=252 guibg=#161821 guifg=#c6c8d1
   hi ColorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=#1e2132 guifg=NONE
   hi CursorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=#1e2132 guifg=NONE
@@ -223,5 +233,3 @@ let g:colors_name = "modice"
   hi! link typescriptMessage Normal
   hi! link typescriptNull Constant
   hi! link typescriptParens Normal
-
-

@@ -1,4 +1,3 @@
-
 " For more options see ":help option-list" and ":options".
 
 " make VIM use all default modes instead of what VI uses
@@ -197,7 +196,6 @@ map <leader>w :w!<cr>
 au GUIEnter * simalt ~x
 
 
-
 "set font size for console"
 set guifont=Consolas:h14
 
@@ -219,4 +217,3 @@ nnoremap <space> i<space><esc>
 set backupdir=$TEMP//
 set directory=$TEMP//
 set undodir=$TEMP//
-
