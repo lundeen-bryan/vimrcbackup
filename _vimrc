@@ -197,6 +197,9 @@ au GUIEnter * simalt ~x
 "add package manager
 packloadall
 
+"load nerdtree automatically
+autocmd vimenter * NERDTree
+
 "set font size for console"
 set guifont=Consolas:h14
 
