@@ -180,7 +180,9 @@ set smartindent
 set expandtab
 
 " Remap VIM 0 to first non-blank character
-map 0 ^
+"map 0 ^ --removed this as it makes more sense to go to the beginning of the
+"line then to go to the first character you would then press 0w to go there
+"and wala!
 
 " Easily create HTML unorded lists.
 map <F3> i<ul><CR><Space><Space><li></li><CR><Esc>I</ul><Esc>kcit
@@ -192,7 +194,8 @@ map <leader>w :w!<cr>
 "start maximised"
 au GUIEnter * simalt ~x
 
-
+"add package manager
+packloadall
 
 "set font size for console"
 set guifont=Consolas:h14
