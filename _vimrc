@@ -103,7 +103,7 @@ set expandtab
 "set listchars=space:_,tab:>~ list " this will add underscored for all whitespace
 
 " set backspace over everything in insert mode w/o this it won't bkspc
-:set backspace=indent,eol,start
+set backspace=indent,eol,start
 
 " no line wrap
 set nowrap
@@ -124,7 +124,12 @@ if &t_Co > 2 || has("gui_running")
   " Revert with ":unlet c_comment_strings".
   let c_comment_strings=1
 endif
+
+" Toggle highlighting off
+map <leader>hl :noh
+
 syntax enable
+
 set background=dark
 
 if !has('gui_running')
@@ -213,6 +218,10 @@ inoremap jk <Esc>
 
 "in COMMAND mode press jk to enter NORMAL mode
 cnoremap jk <Esc>
+
+"in COMMAND mode press ctrl+a to go to beggining, ctrl+e for end
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
 
 "in Normal mode add a space when you hit the space bar
 nnoremap <space> i<space><esc>
