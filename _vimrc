@@ -198,7 +198,8 @@ au GUIEnter * simalt ~x
 packloadall
 
 "load nerdtree automatically
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
+map <leader>nerd :NERDTree<CR>
 
 "set font size for console"
 set guifont=Consolas:h14
