@@ -18,6 +18,7 @@ if exists('syntax_on')
   syntax reset
 endif
 
+"the code below is for dark bg only
 set background=dark
 
 let g:colors_name = "modice"

@@ -3,8 +3,8 @@
 " make VIM use all default modes instead of what VI uses
 set nocompatible
 
-" show full path in status line for current file
-"set statusline+=%F
+" show full path in status line for current file on right side of statusline
+set statusline+=%F
 
 " change the mapleader from \ to ,
 " NOTE: This has to be set before <leader> is used.
@@ -113,33 +113,33 @@ if has ('reltime')
 set incsearch
 endif
 
-" Switch syntax highlighting on when the terminal has colors or when using the
-" GUI (which always has colors).
-if &t_Co > 2 || has("gui_running")
+"if I'm running gvim GUI AND I have more than 256 colors available then
+"if &t_Co > 2 || has("gui_running")
+if has('gui running')
   " Revert with ":syntax off".
   syntax on
   " Highlight search matches
-  set hlsearch
+   set hlsearch
   " I like highlighting strings inside C comments.
   " Revert with ":unlet c_comment_strings".
   let c_comment_strings=1
-endif
-
-" Toggle highlighting off
-map <leader>hl :noh
-
-syntax enable
-
-set background=dark
-
-if !has('gui_running')
+  colorscheme iceberg
+else
+" if I'm using terminal vim then I'll set the following
+    " use 256color setting for full color range
+    set term=xterm-256color
     set termguicolors
     syntax enable
     set background=dark
-    colorscheme modice
-else
-  colorscheme iceberg
+    "colorscheme modice
+    colorscheme iceberg
 endif
+
+" Toggle highlighting off
+map <leader>hl :noh<CR>
+map <leader>Hl :set hlsearch<CR>
+
+syntax enable
 
 " Show the line and column number of the cursor position
 set ruler
@@ -206,6 +206,9 @@ packloadall
 "autocmd vimenter * NERDTree
 map <leader>nerd :NERDTree<CR>
 
+" map 2commas to the ctrl+y command for emmet completion
+imap ,, <C-y>,
+
 "set font size for console"
 set guifont=Consolas:h14
 
@@ -218,10 +221,6 @@ inoremap jk <Esc>
 
 "in COMMAND mode press jk to enter NORMAL mode
 cnoremap jk <Esc>
-
-"in COMMAND mode press ctrl+a to go to beggining, ctrl+e for end
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
 
 "in Normal mode add a space when you hit the space bar
 nnoremap <space> i<space><esc>
