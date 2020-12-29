@@ -1,10 +1,13 @@
 " For more options see ":help option-list" and ":options".
 
+"add package manager
+packloadall
+
 " make VIM use all default modes instead of what VI uses
 set nocompatible
 
 " show full path in status line for current file on right side of statusline
-set statusline+=%F
+set statusline=%F
 
 " change the mapleader from \ to ,
 " NOTE: This has to be set before <leader> is used.
@@ -54,23 +57,12 @@ set mouse=a
 " display incomplete commands
 set showcmd
 
-"+------------------Clipboard stuff----------------------+
-"| note that "x" will always cut to the system clipboard |
-"| command :reg will display all clipboard contents      |
-"| ,q will copy the current line to the clipboard        |
-"| ,Q will append the current line to what is already    |
-"| on the clipboard. Then ,y copies the visual selection |
-"| to the clipboard, ,p will paste that buffer           |
-"+-------------------------------------------------------+
 " use the system clipboard by default; use clipboard+=unnamedplus for full clipboard
 set clipboard+=unnamedplus
-" quick copy a line and go to the next line, saves text to register "q"
-map <leader>q "qY<CR>
-map <leader>Q "QY<CR>
-map <leader>y "+y
-map <leader>p "+p
-"the line below will wipe out all registers that coorespond to any letter
+
+"the line below will wipe out all registers that correspond to any letter
 command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
+
 " Map Y to act like D and C, i.e. yank until EOL, rather than act like yy
 map Y y$
 
@@ -125,21 +117,24 @@ if has('gui running')
   let c_comment_strings=1
   colorscheme iceberg
 else
-" if I'm using terminal vim then I'll set the following
+" if I'm using terminal vim then I'll set the following
     " use 256color setting for full color range
     set term=xterm-256color
     set termguicolors
     syntax enable
+    colorscheme default
     set background=dark
-    "colorscheme modice
-    colorscheme iceberg
 endif
 
 " Toggle highlighting off
-map <leader>hl :noh<CR>
-map <leader>Hl :set hlsearch<CR>
+map <leader>hh :set hlsearch!<CR>
+map <leader>HH :set hlsearch<CR>
 
-syntax enable
+"Make a block cursor
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
 
 " Show the line and column number of the cursor position
 set ruler
@@ -149,7 +144,7 @@ set showcmd
 
 " sets a magenta color on status line when in Insert Mode
 set laststatus=2
-if version >=700
+if version >=800
   au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
   au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 endif
@@ -159,9 +154,6 @@ set wildmenu
 
 " Show a few lines of context around the cursor
 set scrolloff=5
-
-" Enable incremental searching
-set incsearch
 
 " Ignore case when searching
 set ignorecase
@@ -198,9 +190,6 @@ map <leader>w :w!<cr>
 
 "start maximised"
 au GUIEnter * simalt ~x
-
-"add package manager
-packloadall
 
 "load nerdtree automatically
 "autocmd vimenter * NERDTree
