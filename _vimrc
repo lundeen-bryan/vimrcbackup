@@ -114,6 +114,10 @@ if has ('reltime')
 set incsearch
 endif
 
+" Toggle off search highlight
+map <leader>hl :noh<CR>
+
+
 " Switch syntax highlighting on when the terminal has colors or when using the
 " GUI (which always has colors).
 if &t_Co > 2 || has("gui_running")
