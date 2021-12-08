@@ -4,8 +4,8 @@
 " make VIM use all default modes instead of what VI uses
 set nocompatible
 
-" show full path in status line for current file
-"set statusline+=%F
+" show full path in status line for current file on right side of statusline
+set statusline+=%F
 
 " change the mapleader from \ to ,
 " NOTE: This has to be set before <leader> is used.
@@ -104,7 +104,7 @@ set expandtab
 "set listchars=space:_,tab:>~ list " this will add underscored for all whitespace
 
 " set backspace over everything in insert mode w/o this it won't bkspc
-:set backspace=indent,eol,start
+set backspace=indent,eol,start
 
 " no line wrap
 set nowrap
@@ -114,6 +114,7 @@ if has ('reltime')
 set incsearch
 endif
 
+<<<<<<< HEAD
 " Toggle off search highlight
 map <leader>hl :noh<CR>
 
@@ -121,25 +122,35 @@ map <leader>hl :noh<CR>
 " Switch syntax highlighting on when the terminal has colors or when using the
 " GUI (which always has colors).
 if &t_Co > 2 || has("gui_running")
+=======
+"if I'm running gvim GUI AND I have more than 256 colors available then
+"if &t_Co > 2 || has("gui_running")
+if has('gui running')
+>>>>>>> 3c675e8c4dc7289c4296b7e99cfe2c0313db9002
   " Revert with ":syntax off".
   syntax on
   " Highlight search matches
-  set hlsearch
+   set hlsearch
   " I like highlighting strings inside C comments.
   " Revert with ":unlet c_comment_strings".
   let c_comment_strings=1
-endif
-syntax enable
-set background=dark
-
-if !has('gui_running')
+  colorscheme iceberg
+else
+" if I'm using terminal vim then I'll set the following
+    " use 256color setting for full color range
+    set term=xterm-256color
     set termguicolors
     syntax enable
     set background=dark
-    colorscheme modice
-else
-  colorscheme iceberg
+    "colorscheme modice
+    colorscheme iceberg
 endif
+
+" Toggle highlighting off
+map <leader>hl :noh<CR>
+map <leader>Hl :set hlsearch<CR>
+
+syntax enable
 
 " Show the line and column number of the cursor position
 set ruler
@@ -203,7 +214,11 @@ au GUIEnter * simalt ~x
 packloadall
 
 "load nerdtree automatically
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
+map <leader>nerd :NERDTree<CR>
+
+" map 2commas to the ctrl+y command for emmet  completion
+imap ,, <C-y>,
 
 "set font size for console"
 set guifont=Consolas:h14
@@ -220,6 +235,28 @@ cnoremap jk <Esc>
 
 "in Normal mode add a space when you hit the space bar
 nnoremap <space> i<space><esc>
+
+" Tab completion
+" will insert tab at beginning of line,
+" will use completion if not at beginning
+set wildmode=list:longest,list:full
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <S-Tab> <c-n>
+
+" . scan the current buffer, b scan other loaded buffers that are in the buffer list, u scan the unloaded buffers that
+" are in the buffer list, w scan buffers from other windows, t tag completion
+set complete=.,b,u,w,t,]
+
+" Keyword list
+set complete+=k~/.vim/keywords.txt
 
 "set backups for vim files to tmp folder use // to force
 "filename will show full path in Windows File Explorer filename
