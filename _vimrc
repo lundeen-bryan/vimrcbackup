@@ -9,9 +9,8 @@ set nocompatible
 " show full path in status line for current file on right side of statusline
 set statusline=%F
 
-" change the mapleader from \ to ,
-" NOTE: This has to be set before <leader> is used.
-let mapleader=","
+" Shortcuts file has keymaps
+source ~/.vim/shortcuts.vim
 
 " Use the internal diff if available.
 " Otherwise use the special 'diffexpr' for Windows.
@@ -62,9 +61,6 @@ set clipboard+=unnamedplus
 
 "the line below will wipe out all registers that correspond to any letter
 command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
-
-" Map Y to act like D and C, i.e. yank until EOL, rather than act like yy
-map Y y$
 
 " vertically scroll to top of document when entering insert mode
 autocmd InsertEnter * norm zt
@@ -126,10 +122,6 @@ else
     set background=dark
 endif
 
-" Toggle highlighting off
-map <leader>hh :set hlsearch!<CR>
-map <leader>HH :set hlsearch<CR>
-
 "Make a block cursor
 let &t_ti.="\e[1 q"
 let &t_SI.="\e[5 q"
@@ -142,12 +134,15 @@ set ruler
 " Display the incomplete commands in the bottom right-hand side of your screen.
 set showcmd
 
-" sets a magenta color on status line when in Insert Mode
+" ================= Terminal statusbar color ======================
+" sets a magenta color on status line when in Insert Mode,
+" otherwise it's green
 set laststatus=2
 if version >=800
   au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
   au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 endif
+" ================= End Terminal statusbar color ===================
 
 " Display completion matches on your status line
 set wildmenu
@@ -181,22 +176,8 @@ set expandtab
 "line then to go to the first character you would then press 0w to go there
 "and wala!
 
-" Easily create HTML unorded lists.
-map <F3> i<ul><CR><Space><Space><li></li><CR><Esc>I</ul><Esc>kcit
-map <F4> <Esc>o<li></li><Esc>cit
-
-" Quickly save your file.
-map <leader>w :w!<cr>
-
 "start maximised"
 au GUIEnter * simalt ~x
-
-"load nerdtree automatically
-"autocmd vimenter * NERDTree
-map <leader>nerd :NERDTree<CR>
-
-" map 2commas to the ctrl+y command for emmet  completion
-imap ,, <C-y>,
 
 "set font size for console"
 set guifont=Consolas:h14
@@ -204,15 +185,6 @@ set guifont=Consolas:h14
 " turn on column/cursor hightlights
 "set cursorcolumn
 "set cursorline
-
-"in INSERT mode press jk to enter NORMAL mode
-inoremap jk <Esc>
-
-"in COMMAND mode press jk to enter NORMAL mode
-cnoremap jk <Esc>
-
-"in Normal mode add a space when you hit the space bar
-nnoremap <space> i<space><esc>
 
 " Tab completion
 " will insert tab at beginning of line,
@@ -226,8 +198,6 @@ function! InsertTabWrapper()
         return "\<c-p>"
     endif
 endfunction
-inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <S-Tab> <c-n>
 
 " . scan the current buffer, b scan other loaded buffers that are in the buffer list, u scan the unloaded buffers that
 " are in the buffer list, w scan buffers from other windows, t tag completion
