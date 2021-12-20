@@ -107,7 +107,7 @@ map <leader>hl :noh<CR>
 
 " Switch syntax highlighting on when the terminal has colors or when using the
 " GUI (which always has colors).
-if &t_Co > 2 || has("gui_running")
+"if &t_Co > 2 || has("gui_running")
 "if I'm running gvim GUI AND I have more than 256 colors available then
 "if &t_Co > 2 || has("gui_running")
 if has('gui running')
