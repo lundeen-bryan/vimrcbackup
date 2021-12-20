@@ -234,5 +234,3 @@ let g:colors_name = "modice"
   hi! link typescriptMessage Normal
   hi! link typescriptNull Constant
   hi! link typescriptParens Normal
-
-

@@ -1,3 +1,4 @@
+
 " For more options see ":help option-list" and ":options".
 
 "add package manager
@@ -101,9 +102,19 @@ if has ('reltime')
 set incsearch
 endif
 
+<<<<<<< HEAD
+" Toggle off search highlight
+map <leader>hl :noh<CR>
+
+
+" Switch syntax highlighting on when the terminal has colors or when using the
+" GUI (which always has colors).
+if &t_Co > 2 || has("gui_running")
+=======
 "if I'm running gvim GUI AND I have more than 256 colors available then
 "if &t_Co > 2 || has("gui_running")
 if has('gui running')
+>>>>>>> 3c675e8c4dc7289c4296b7e99cfe2c0313db9002
   " Revert with ":syntax off".
   syntax on
   " Highlight search matches
