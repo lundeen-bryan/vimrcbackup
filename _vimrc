@@ -1,4 +1,3 @@
-
 " For more options see ":help option-list" and ":options".
 
 "add package manager
@@ -102,7 +101,6 @@ if has ('reltime')
 set incsearch
 endif
 
-<<<<<<< HEAD
 " Toggle off search highlight
 map <leader>hl :noh<CR>
 
