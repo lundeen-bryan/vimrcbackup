@@ -9,6 +9,7 @@ let mapleader=","
 " Toggle highlighting off
 map <leader>hh :set hlsearch!<CR>
 map <leader>HH :set hlsearch<CR>
+map <leader>hl :noh<CR>
 
 " Quickly save your file.
 map <leader>w :w!<cr>
