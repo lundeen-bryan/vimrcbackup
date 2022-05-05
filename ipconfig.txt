@@ -1,0 +1,113 @@
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : DESKTOP-HKIAEAM
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : hsd1.ca.comcast.net
+
+Ethernet adapter VirtualBox Host-Only Network:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : VirtualBox Host-Only Ethernet Adapter
+   Physical Address. . . . . . . . . : 0A-00-27-00-00-0C
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::e4b6:4c6b:2b2d:9755%12(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.56.1(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+   DHCPv6 IAID . . . . . . . . . . . : 352976935
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-25-61-C0-BD-30-9C-23-F9-F5-9B
+   DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Ethernet 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : USB Ethernet
+   Physical Address. . . . . . . . . : 80-3F-5D-01-7B-32
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Wi-Fi:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : hsd1.ca.comcast.net
+   Description . . . . . . . . . . . : Realtek 8821CE Wireless LAN 802.11ac PCI-E NIC
+   Physical Address. . . . . . . . . : B0-FC-36-E8-4A-0B
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 11:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter
+   Physical Address. . . . . . . . . : B2-FC-36-E8-4A-0B
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . : hsd1.ca.comcast.net
+   Description . . . . . . . . . . . : Intel(R) Ethernet Connection (7) I219-V
+   Physical Address. . . . . . . . . : 30-9C-23-F9-F5-9B
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : 2601:640:c500:1480::d8bc(Preferred)
+   Lease Obtained. . . . . . . . . . : Sunday, December 12, 2021 5:50:36 AM
+   Lease Expires . . . . . . . . . . : Saturday, January 8, 2022 8:44:37 AM
+   IPv6 Address. . . . . . . . . . . : 2601:640:c500:1480:4035:1d55:6550:3a43(Preferred)
+   Temporary IPv6 Address. . . . . . : 2601:640:c500:1480:b811:e5f:4a3f:9da0(Preferred)
+   Link-local IPv6 Address . . . . . : fe80::4035:1d55:6550:3a43%2(Preferred)
+   IPv4 Address. . . . . . . . . . . : 10.0.0.41(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Sunday, December 12, 2021 5:50:41 AM
+   Lease Expires . . . . . . . . . . : Tuesday, January 4, 2022 6:45:37 AM
+   Default Gateway . . . . . . . . . : fe80::8617:efff:fe6a:f0a5%2
+                                       10.0.0.1
+   DHCP Server . . . . . . . . . . . : 10.0.0.1
+   DHCPv6 IAID . . . . . . . . . . . : 87071779
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-25-61-C0-BD-30-9C-23-F9-F5-9B
+   DNS Servers . . . . . . . . . . . : 2001:558:feed::1
+                                       2001:558:feed::2
+                                       8.8.8.8
+                                       8.8.4.4
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Tunnel adapter isatap.{D5087B3E-6209-4C29-AA5F-FB9774D0855A}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter Teredo Tunneling Pseudo-Interface:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Teredo Tunneling Pseudo-Interface
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : 2001:0:34f1:8072:18fc:ecd:f5ff:ffd6(Preferred)
+   Link-local IPv6 Address . . . . . : fe80::18fc:ecd:f5ff:ffd6%3(Preferred)
+   Default Gateway . . . . . . . . . :
+   DHCPv6 IAID . . . . . . . . . . . : 301989888
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-25-61-C0-BD-30-9C-23-F9-F5-9B
+   NetBIOS over Tcpip. . . . . . . . : Disabled
+
+Tunnel adapter isatap.hsd1.ca.comcast.net:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : hsd1.ca.comcast.net
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter #2
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes

@@ -12,7 +12,7 @@ map <leader>HH :set hlsearch<CR>
 map <leader>hl :noh<CR>
 
 " Quickly save your file.
-map <leader>w :w!<cr>
+map <leader><leader>w :w!<cr>
 
 " Open a terminal below window
 nnoremap <leader>tt :bot terminal<CR>
@@ -23,6 +23,8 @@ map <leader>nerd :NERDTree<CR>
 
 " Map Y to act like D and C, i.e. yank until EOL, rather than act like yy
 map Y y$
+
+"script_31337_path_and_na[m]e_without_extension_11
 
 " Easily create HTML unorded lists.
 map <F3> i<ul><CR><Space><Space><li></li><CR><Esc>I</ul><Esc>kcit

@@ -174,6 +174,9 @@ set smartindent
 " Use spaces instead of tabs
 set expandtab
 
+" Use CamelCaseDefault settins in plugin
+let g:camelcasemotion_key = '<leader>'
+
 " Remap VIM 0 to first non-blank character
 "map 0 ^ --removed this as it makes more sense to go to the beginning of the
 "line then to go to the first character you would then press 0w to go there
