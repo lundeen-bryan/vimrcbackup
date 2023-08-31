@@ -12,7 +12,7 @@ map <leader>HH :set hlsearch<CR>
 map <leader>hl :noh<CR>
 
 " Quickly save your file.
-map <leader><leader>. .w!<cr>
+map <leader><leader>. :w!<cr>
 
 " Open a terminal below window
 nnoremap <leader>tt :bot terminal<CR>
