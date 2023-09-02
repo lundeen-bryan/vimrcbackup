@@ -95,12 +95,13 @@ Credit to [RomainL](https://github.com/romainl/idiomatic-vimrc) for the original
 | `CSApprox`        | Makes Vim's GUI colors available in terminal Vim.                        | [GitHub Link](https://github.com/godlygeek/csapprox)   |
 | `CamelCaseMotion` | Adds motion through camelCase words and other kinds of "words".          | [GitHub Link](https://github.com/bkad/CamelCaseMotion) |
 | `dos2unix`        | Helps convert between DOS and Unix file formats.                         | *[See notes below](#about-dos2unix)  |
-| `emmet-vim`       | Provides support for the Emmet web development tool.                     | [GitHub Link](https://github.com/mattn/emmet-vim)      |
-| `nerdtree`        | A tree explorer plugin for Vim.                                          | [GitHub Link](https://github.com/preservim/nerdtree)   |
-| `vim-gist`        | Allows you to work with Gists on GitHub directly from Vim.               | [GitHub Link](https://github.com/mattn/vim-gist)       |
-| `vim-pandoc`      | Integration between Vim and Pandoc.                                      | [GitHub Link](https://github.com/vim-pandoc/vim-pandoc)|
-| `vim-prettier`    | A Vim plugin wrapper for the JavaScript tool Prettier.                   | [GitHub Link](https://github.com/prettier/vim-prettier)|
-| `webapi-vim`      | Allows Vim to interact with web APIs.                                    | [GitHub Link](https://github.com/mattn/webapi-vim)     |
+| `emmet-vim`       | Provides support for the Emmet web development tool.                     | [GitHub Link](https://github.com/mattn/emmet-vim)       |
+| `nerdtree`        | A tree explorer plugin for Vim.                                          | [GitHub Link](https://github.com/preservim/nerdtree)    |
+| `vim-gist`        | Allows you to work with Gists on GitHub directly from Vim.               | [GitHub Link](https://github.com/mattn/vim-gist)        |
+| `vim-pandoc`      | Integration between Vim and Pandoc.                                      | [GitHub Link](https://github.com/vim-pandoc/vim-pandoc) |
+| `vim-prettier`    | A Vim plugin wrapper for the JavaScript tool Prettier.                   | [GitHub Link](https://github.com/prettier/vim-prettier) |
+| `webapi-vim`      | Allows Vim to interact with web APIs.                                    | [GitHub Link](https://github.com/mattn/webapi-vim)      |
+| `git-open  `      | Allows user to open git repo of selected module.                         | [GitHub Link](https://github.com/lundeen-bryan/git-open)|
 
 ### About dos2unix
 
