@@ -1,0 +1,3 @@
+[submodule "pack/plugins/start/csapprox"]
+	path = pack/plugins/start/csapprox
+	url = https://github.com/godlygeek/csapprox.git

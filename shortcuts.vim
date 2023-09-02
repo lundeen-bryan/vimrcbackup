@@ -18,8 +18,8 @@ map <leader><leader>. :w!<cr>
 nnoremap <leader>tt :bot terminal<CR>
 
 "load nerdtree automatically
-"autocmd vimenter * NERDTree
-map <leader>nerd :NERDTree<CR>
+autocmd vimenter * NERDTree
+" map <leader>nerd :NERDTree<CR>
 
 " Map Y to act like D and C, i.e. yank until EOL, rather than act like yy
 map Y y$
