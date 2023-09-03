@@ -114,6 +114,13 @@ For more detailed information:
 - Dive into the [Author&#39;s Changelog](https://dos2unix.sourceforge.io/) for a deeper understanding of its development and version history.
 - For insights on how line endings impact Vim and other helpful tools related to file formats, the [Vim Wiki](https://vim.fandom.com/wiki/File_format#Tools) is an invaluable resource.
 
+### A Note About Using VIM in Cmder
+
+When you are in Cmder and open a windows bash terminal, then open a file in VIM, the configuration in bash doesn't work right and the screen will appear to be blank.
+
+The issue was [reported](https://github.com/Maximus5/ConEmu/issues/653) and it turns out that you can only run vim when you are in the minty version of Bash.
+
+
 [Back To The Top](#bryans_vimrc)
 
 ---
