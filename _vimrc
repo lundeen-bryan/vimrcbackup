@@ -3,6 +3,9 @@
 "add package manager
 packloadall
 
+"this should open files with unix line endings
+set fileformats=unix,dos
+
 " make VIM use all default modes instead of what VI uses
 set nocompatible
 
@@ -59,9 +62,6 @@ set showcmd
 " use the system clipboard by default; use clipboard+=unnamedplus for full clipboard
 set clipboard+=unnamedplus
 
-"the line below will wipe out all registers that correspond to any letter
-command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
-
 " vertically scroll to top of document when entering insert mode
 autocmd InsertEnter * norm zt
 
@@ -114,14 +114,14 @@ if has('gui running')
   " I like highlighting strings inside C comments.
   " Revert with ":unlet c_comment_strings".
   let c_comment_strings=1
-  colorscheme iceberg
+  colorscheme modice
 else
 " if I'm using terminal vim then I'll set the following
     " use 256color setting for full color range
     set term=xterm-256color
     set termguicolors
     syntax enable
-    colorscheme default
+    colorscheme modice
     set background=dark
 endif
 
@@ -217,4 +217,5 @@ set complete+=k~/.vim/keywords.txt
 set backupdir=$TEMP//
 set directory=$TEMP//
 set undodir=$TEMP//
+
 

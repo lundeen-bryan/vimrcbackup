@@ -23,6 +23,8 @@ and this project adheres to [Semantic Versioning].
 
 ### Fixed
 
+ - fixed problem with defunct plugins in vim
+
 ### Security
 
 ## [0.0.1] - 2023-09-02

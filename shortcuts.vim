@@ -11,6 +11,21 @@ map <leader>hh :set hlsearch!<CR>
 map <leader>HH :set hlsearch<CR>
 map <leader>hl :noh<CR>
 
+" use command for toggling line endings on/off
+function! ToggleLineEndings()
+    if &list
+        set nolist
+    else
+        set list
+    endif
+endfunction
+
+command! Lines call ToggleLineEndings()
+
+
+"the line below will wipe out all registers that correspond to any letter
+command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
+
 " Quickly save your file.
 map <leader><leader>. :w!<cr>
 
@@ -23,8 +38,6 @@ map <leader>nerd :NERDTree<CR>
 
 " Map Y to act like D and C, i.e. yank until EOL, rather than act like yy
 map Y y$
-
-"script_31337_path_and_na[m]e_without_extension_11
 
 " Easily create HTML unorded lists.
 map <F3> i<ul><CR><Space><Space><li></li><CR><Esc>I</ul><Esc>kcit
