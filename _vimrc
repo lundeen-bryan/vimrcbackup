@@ -205,6 +205,8 @@ function! InsertTabWrapper()
     endif
 endfunction
 
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
 " . scan the current buffer, b scan other loaded buffers that are in the buffer list, u scan the unloaded buffers that
 " are in the buffer list, w scan buffers from other windows, t tag completion
 set complete=.,b,u,w,t,]

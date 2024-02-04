@@ -57,3 +57,7 @@ nnoremap <space> i<space><esc>
 
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
+
+" easly insert timestamp
+:nnoremap <F5> "=strftime("%F%T")<CR>P
+:inoremap <F5> <C-R>=strftime("%F%T")<CR>
